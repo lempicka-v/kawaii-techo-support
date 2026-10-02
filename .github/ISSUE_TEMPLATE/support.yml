@@ -1,0 +1,37 @@
+name: Kawaii Techo support / サポート
+description: Report a Kawaii Techo issue without personal information / 個人情報を含めず問題を報告
+title: "[Support] "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        **This post is PUBLIC. / この投稿は公開されます。**
+        Do not post photos, health records, contacts, locations, journal text, backups, payment details or account credentials.
+        写真、健康情報、連絡先、位置情報、手帳本文、バックアップ、支払い・アカウント情報を投稿しないでください。
+        Redact screenshots. / 画面の個人情報も隠してください。
+  - type: input
+    id: app-version
+    attributes:
+      label: App version / アプリのバージョン
+    validations:
+      required: true
+  - type: input
+    id: ios-version
+    attributes:
+      label: iOS version / iOSのバージョン
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps and error / 操作とエラー
+      description: Describe the steps, expected result and error without private content. / 個人情報を含めず、操作・期待した結果・エラーを記載してください。
+    validations:
+      required: true
+  - type: checkboxes
+    id: privacy
+    attributes:
+      label: Public post confirmation / 公開投稿の確認
+      options:
+        - label: I understand this post is public and have not included private content. / 公開投稿と理解し、個人情報を含めていません。
+          required: true
